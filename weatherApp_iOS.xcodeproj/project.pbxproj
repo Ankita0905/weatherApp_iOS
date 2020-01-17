@@ -13,6 +13,10 @@
 		E084186B23D26DE40070E74C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E084186923D26DE40070E74C /* Main.storyboard */; };
 		E084186D23D26DE70070E74C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E084186C23D26DE70070E74C /* Assets.xcassets */; };
 		E084187023D26DE70070E74C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E084186E23D26DE70070E74C /* LaunchScreen.storyboard */; };
+		E084187923D26E0E0070E74C /* CityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E084187823D26E0E0070E74C /* CityTableViewController.swift */; };
+		E084187C23D270610070E74C /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E084187A23D270610070E74C /* SwiftyJSON.swift */; };
+		E084187E23D271210070E74C /* WeatherUrlManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E084187D23D271210070E74C /* WeatherUrlManager.swift */; };
+		E084188023D274F10070E74C /* CityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E084187F23D274F10070E74C /* CityTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,11 @@
 		E084186C23D26DE70070E74C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E084186F23D26DE70070E74C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E084187123D26DE70070E74C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E084187823D26E0E0070E74C /* CityTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTableViewController.swift; sourceTree = "<group>"; };
+		E084187A23D270610070E74C /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		E084187B23D270610070E74C /* SwiftyJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftyJSON.h; sourceTree = "<group>"; };
+		E084187D23D271210070E74C /* WeatherUrlManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherUrlManager.swift; sourceTree = "<group>"; };
+		E084187F23D274F10070E74C /* CityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +65,28 @@
 		E084186223D26DE40070E74C /* weatherApp_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				E084187723D26DF00070E74C /* Controller */,
 				E084186323D26DE40070E74C /* AppDelegate.swift */,
 				E084186523D26DE40070E74C /* SceneDelegate.swift */,
-				E084186723D26DE40070E74C /* ViewController.swift */,
 				E084186923D26DE40070E74C /* Main.storyboard */,
+				E084187B23D270610070E74C /* SwiftyJSON.h */,
+				E084187A23D270610070E74C /* SwiftyJSON.swift */,
 				E084186C23D26DE70070E74C /* Assets.xcassets */,
 				E084186E23D26DE70070E74C /* LaunchScreen.storyboard */,
 				E084187123D26DE70070E74C /* Info.plist */,
+				E084187D23D271210070E74C /* WeatherUrlManager.swift */,
 			);
 			path = weatherApp_iOS;
+			sourceTree = "<group>";
+		};
+		E084187723D26DF00070E74C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E084186723D26DE40070E74C /* ViewController.swift */,
+				E084187823D26E0E0070E74C /* CityTableViewController.swift */,
+				E084187F23D274F10070E74C /* CityTableViewCell.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +160,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E084187E23D271210070E74C /* WeatherUrlManager.swift in Sources */,
+				E084188023D274F10070E74C /* CityTableViewCell.swift in Sources */,
+				E084187923D26E0E0070E74C /* CityTableViewController.swift in Sources */,
 				E084186823D26DE40070E74C /* ViewController.swift in Sources */,
 				E084186423D26DE40070E74C /* AppDelegate.swift in Sources */,
+				E084187C23D270610070E74C /* SwiftyJSON.swift in Sources */,
 				E084186623D26DE40070E74C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
