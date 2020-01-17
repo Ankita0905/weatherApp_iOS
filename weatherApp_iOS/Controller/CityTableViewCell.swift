@@ -10,6 +10,7 @@ import UIKit
 
 class CityTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var cityIcon: UIImageView!
     @IBOutlet weak var tempLbl: UILabel!
     @IBOutlet weak var cityLbl: UILabel!
     override func awakeFromNib() {
@@ -36,12 +37,35 @@ class CityTableViewCell: UITableViewCell {
                     //load the temperature
                     if let weatherData = try? JSON(data!)
                     {
-//                        let tempValue = weatherData[
                         print(weatherData)
+                        let tempValue = weatherData["main"]["temp"].intValue
+                        self.loadIcon(weatherData: weatherData)
+                        //UI is in main thread
+                        DispatchQueue.main.async {
+                            self.tempLbl.text="\(tempValue)"
+                        }
                     }
                 }
             }
             task.resume()
+        }
+    }
+    func loadIcon(weatherData: JSON)
+    {
+        let weatherArray = weatherData["weather"].arrayValue
+        let iconCode = weatherArray[0]["icon"].stringValue
+       if let iconUrl = WeatherUrlManager.getWeatherIconUrl(iconCode: iconCode)
+       {
+        let session = URLSession.shared
+        let task=session.dataTask(with: iconUrl) { (data, response, error) in
+            if let iconData = data
+            {
+                //update the UI
+                DispatchQueue.main.async {
+                    self.cityIcon.image = UIImage(data: iconData)
+                }
+            }
+        }
         }
     }
 

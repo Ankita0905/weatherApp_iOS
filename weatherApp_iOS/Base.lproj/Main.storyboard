@@ -50,15 +50,25 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7i7-4D-Snj">
+                                            <rect key="frame" x="314" y="20" width="60" height="60"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="60" id="2yZ-DD-8fV"/>
+                                                <constraint firstAttribute="width" constant="60" id="Mmn-CV-pwt"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="7i7-4D-Snj" secondAttribute="trailing" constant="20" id="GGN-xe-ttG"/>
                                         <constraint firstItem="mHa-jj-9Bj" firstAttribute="leading" secondItem="0Hy-7h-D0d" secondAttribute="leadingMargin" constant="40" id="GGm-Zo-K6I"/>
+                                        <constraint firstItem="7i7-4D-Snj" firstAttribute="centerY" secondItem="0Hy-7h-D0d" secondAttribute="centerY" id="NQG-Ud-0Fx"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="mHa-jj-9Bj" secondAttribute="bottom" constant="5" id="RiH-pA-RVC"/>
                                         <constraint firstItem="FJ8-IC-jo5" firstAttribute="top" secondItem="0Hy-7h-D0d" secondAttribute="topMargin" constant="5" id="b4b-gz-AzH"/>
                                         <constraint firstItem="FJ8-IC-jo5" firstAttribute="leading" secondItem="0Hy-7h-D0d" secondAttribute="leadingMargin" constant="40" id="qid-ns-BuJ"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="cityIcon" destination="7i7-4D-Snj" id="Ofr-ol-MdF"/>
                                     <outlet property="cityLbl" destination="FJ8-IC-jo5" id="WTj-2b-XqH"/>
                                     <outlet property="tempLbl" destination="mHa-jj-9Bj" id="U5c-eD-1tZ"/>
                                 </connections>
