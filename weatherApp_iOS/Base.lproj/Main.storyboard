@@ -114,6 +114,14 @@
                                         <constraint firstAttribute="trailingMargin" secondItem="TMf-GV-xdg" secondAttribute="trailing" constant="-6" id="xSF-62-Brv"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dateLbl" destination="CW4-DN-X4P" id="TVo-I1-AfQ"/>
+                                    <outlet property="feelLbl" destination="BYz-3L-wxu" id="0Ts-Va-moM"/>
+                                    <outlet property="highTempLbl" destination="54s-UL-pnZ" id="C3s-GV-Yse"/>
+                                    <outlet property="lowTempLbl" destination="Jjp-7n-MrM" id="cum-Jb-9KF"/>
+                                    <outlet property="tempLbl" destination="EOT-p9-tFz" id="AiU-8y-La9"/>
+                                    <outlet property="timeLbl" destination="Sbv-xR-cd8" id="4VL-Ub-cy5"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
