@@ -66,6 +66,7 @@ class CityTableViewCell: UITableViewCell {
                 }
             }
         }
+        task.resume()
         }
     }
 

@@ -14,7 +14,7 @@ class CityTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        cities = ["Toronto", "Hawaii", "Vancouver", "Sydney"]
+        cities = ["Toronto", "Hawaii", "Vancouver", "Sydney","Delhi", "Dasuya", "Ludhiana"]
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
