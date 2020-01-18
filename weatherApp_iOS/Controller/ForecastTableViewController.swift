@@ -1,5 +1,5 @@
 //
-//  CityTableViewController.swift
+//  ForecastTableViewController.swift
 //  weatherApp_iOS
 //
 //  Created by Ankita Jain on 2020-01-17.
@@ -8,14 +8,11 @@
 
 import UIKit
 
-class CityTableViewController: UITableViewController {
+class ForecastTableViewController: UITableViewController {
 
-    var cities: [String]?
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        cities = ["Toronto", "Hawaii", "Vancouver", "Sydney", "Dasuya", "Ludhiana","Brampton"]
-        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -27,24 +24,23 @@ class CityTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 0
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return cities?.count ?? 0
+        return 0
     }
 
-    
+    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+
         // Configure the cell...
 
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cityCell") as! CityTableViewCell
-        cell.setCity(city: cities?[indexPath.row] ?? "")
         return cell
     }
-    
+    */
 
     /*
     // Override to support conditional editing of the table view.
