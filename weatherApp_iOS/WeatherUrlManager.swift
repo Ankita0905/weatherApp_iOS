@@ -25,7 +25,7 @@ class WeatherUrlManager
    
     static func getForecastWeatherUrl(city:String)->URL?
     {
-        let urlString="http://api.openweathermap.org/data/2.5/forecast?q=\(city)&APPID=e374da6d1dfad92ef07f72798d1e50a1"
+        let urlString="http://api.openweathermap.org/data/2.5/forecast?q=\(city)&units=metric&APPID=e374da6d1dfad92ef07f72798d1e50a1"
         return URL(string: urlString)
     }
 }

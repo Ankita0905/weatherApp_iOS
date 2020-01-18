@@ -20,7 +20,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2658" y="834"/>
+            <point key="canvasLocation" x="1814" y="-770"/>
         </scene>
         <!--Forecast Table View Controller-->
         <scene sceneID="ziB-XM-CPh">

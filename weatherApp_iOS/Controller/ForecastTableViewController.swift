@@ -26,7 +26,7 @@ class ForecastTableViewController: UITableViewController {
                 {
                     if let forecastData = try? JSON(data: data!)
                     {
-                        
+                        self.loadForecast(data: forecastData)
                     }
                 }
             }
@@ -38,6 +38,14 @@ class ForecastTableViewController: UITableViewController {
     {
         forecasts = [ForecastData]()
         let forecastList = data["list"].arrayValue
+        for json in forecastList
+        {
+            forecasts.append(ForecastData(city: cityName, data: json))
+        }
+        
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
     
     override func viewDidLoad() {
