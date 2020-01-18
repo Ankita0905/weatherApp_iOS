@@ -37,7 +37,7 @@ class ForecastTableViewController: UITableViewController {
     func loadForecast(data: JSON)
     {
         forecasts = [ForecastData]()
-//        let forecastList = data[""]
+        let forecastList = data["list"].arrayValue
     }
     
     override func viewDidLoad() {
@@ -59,7 +59,7 @@ class ForecastTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return forecasts.count
+        return forecasts?.count ?? 0
     }
 
     
