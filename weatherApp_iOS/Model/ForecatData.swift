@@ -8,6 +8,7 @@
 
 import Foundation
 
+var cities: [String]?
 class ForecastData
 {
     internal init(city:String,data:JSON) {

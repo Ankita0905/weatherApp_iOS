@@ -16,6 +16,7 @@ class ForecastTableViewCell: UITableViewCell {
     @IBOutlet weak var lowTempLbl: UILabel!
     @IBOutlet weak var tempLbl: UILabel!
     @IBOutlet weak var feelLbl: UILabel!
+    @IBOutlet weak var iconImg: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -26,5 +27,33 @@ class ForecastTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func setForecast(forecast : ForecastData)
+    {
+        dateLbl.text = forecast.dateString
+        timeLbl.text = forecast.hour
+        highTempLbl.text = forecast.highTemp
+        lowTempLbl.text = forecast.lowTemp
+        tempLbl.text = forecast.dayTemp
+        feelLbl.text = forecast.feelTemp
+        loadImage(iconCode: forecast.iconCode)
+    }
+    func loadImage(iconCode : String)
+    {
+        if let iconUrl = WeatherUrlManager.getWeatherIconUrl(iconCode: iconCode){
+        let session = URLSession.shared
+            let task = session.dataTask(with:iconUrl) { (data, response, error) in
+                if data != nil
+                    {
+                        //update the UI
+                        DispatchQueue.main.async {
+                            self.iconImg.image = UIImage(data: data!)
+                        }
+                    }
+                }
+            task.resume()
+            }
+        }
+    }
 
-}
+

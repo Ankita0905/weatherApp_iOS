@@ -118,6 +118,7 @@
                                     <outlet property="dateLbl" destination="CW4-DN-X4P" id="TVo-I1-AfQ"/>
                                     <outlet property="feelLbl" destination="BYz-3L-wxu" id="0Ts-Va-moM"/>
                                     <outlet property="highTempLbl" destination="54s-UL-pnZ" id="C3s-GV-Yse"/>
+                                    <outlet property="iconImg" destination="TMf-GV-xdg" id="UWc-Da-fPW"/>
                                     <outlet property="lowTempLbl" destination="Jjp-7n-MrM" id="cum-Jb-9KF"/>
                                     <outlet property="tempLbl" destination="EOT-p9-tFz" id="AiU-8y-La9"/>
                                     <outlet property="timeLbl" destination="Sbv-xR-cd8" id="4VL-Ub-cy5"/>

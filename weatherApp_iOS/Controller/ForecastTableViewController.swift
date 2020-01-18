@@ -10,6 +10,36 @@ import UIKit
 
 class ForecastTableViewController: UITableViewController {
 
+    var cityName : String!
+    var forecasts : [ForecastData]!
+    
+    func setCity(city:String)
+    {
+        cityName = city
+        self.title = city
+        
+        if let forecastUrl = WeatherUrlManager.getForecastWeatherUrl(city: city)
+        {
+            let session = URLSession.shared
+            let task = session.dataTask(with: forecastUrl) { (data, response, error) in
+                if data != nil
+                {
+                    if let forecastData = try? JSON(data: data!)
+                    {
+                        
+                    }
+                }
+            }
+            task.resume()
+        }
+    }
+    
+    func loadForecast(data: JSON)
+    {
+        forecasts = [ForecastData]()
+//        let forecastList = data[""]
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,23 +54,25 @@ class ForecastTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return forecasts.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
         // Configure the cell...
 
+        let cell = tableView.dequeueReusableCell(withIdentifier: "forecastCell") as! ForecastTableViewCell
+        cell.setForecast(forecast: forecasts[indexPath.row])
+        
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
